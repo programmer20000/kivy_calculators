@@ -1,0 +1,162 @@
+<RootLayout>:
+    id:Calculator
+    BoxLayout:
+        orientation: "vertical"
+        padding:20
+        spacing:16
+
+        MDTextField:
+            text: ""
+            hint_text: "ENTER NUMBERS"
+            mode: "rectangle"
+            font_size:40
+            size_hint:1,.2
+            text_color: "black"
+            multiline:False
+            background_normal: "None"
+            foreground_color:"white"
+            size_hint:1,.2
+            id: entry
+
+        GridLayout:
+            cols:4
+            spacing:6
+
+            Button:
+                text: "7"
+                font_size:19
+                background_color:"2052E7"
+                background_normal: "None"
+                on_press:entry.text += self.text
+
+            Button:
+                text: "8"
+                font_size:19
+                background_color:"2052E7"
+                background_normal: "None"
+                on_press:entry.text += self.text
+
+            Button:
+                text: "9"
+                font_size:19
+                background_color:"2052E7"
+                background_normal: "None"
+                on_press:entry.text += self.text
+
+            Button:
+                text: "÷"
+                font_size:19
+                background_color:"000000"
+                background_normal: "None"
+                on_press:entry.text += "/"
+
+            Button:
+                text: "4"
+                font_size:19
+                background_color:"2052E7"
+                background_normal: "None"
+                on_press:entry.text += self.text
+            Button:
+                text: "5"
+                font_size:19
+                background_color:"2052E7"
+                background_normal: "None"
+                on_press:entry.text += self.text
+
+            Button:
+                text: "6"
+                font_size:19
+                background_color:"2052E7"
+                background_normal: "None"
+                on_press:entry.text += self.text
+
+            Button:
+                text: "x"
+                font_size:19
+                background_color:"000000"
+                background_normal: "None"
+                on_press:entry.text +="*"
+
+            Button:
+                text: "1"
+                font_size:19
+                background_color:"2052E7"
+                background_normal: "None"
+                on_press:entry.text += self.text
+
+            Button:
+                text: "2"
+                font_size:19
+                background_color:"2052E7"
+                background_normal: "None"
+                on_press:entry.text += self.text
+
+            Button:
+                text: "3"
+                font_size:19
+                background_color:"2052E7"
+                background_normal: "None"
+                on_press:entry.text += self.text
+
+            Button:
+                text: "-"
+                font_size:19
+                background_color:"000000"
+                background_normal: "None"
+                on_press:entry.text += self.text
+
+            Button:
+                text: "("
+                font_size:19
+                background_color:"2052E7"
+                background_normal: "None"
+                on_press:entry.text += self.text
+
+            Button:
+                text: "0"
+                font_size:19
+                background_color:"2052E7"
+                background_normal: "None"
+                on_press:entry.text += self.text
+
+            Button:
+                text: ")"
+                font_size:19
+                background_color:"2052E7"
+                background_normal: "None"
+                on_press:entry.text += self.text
+
+            Button:
+                text: "+"
+                font_size:19
+                background_color:"000000"
+                background_normal: "None"
+                on_press:entry.text += self.text
+
+            Button:
+                text: "C"
+                font_size:19
+                background_color:"2052E7"
+                background_normal: "None"
+                on_press:entry.text = entry.text[:-1]
+
+            Button:
+                text: "CE"
+                font_size:19
+                background_color:"2052E7"
+                background_normal: "None"
+                on_press:entry.text += ""
+
+            Button:
+                text: "."
+                font_size:19
+                background_color:"2052E7"
+                background_normal: "None"
+                on_press:entry.text += self.text
+
+            Button:
+                text: "="
+                font_size:19
+                background_color:"000000"
+                background_normal: "None"
+                on_press:entry.text = str(eval(entry.text))
